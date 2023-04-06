@@ -55,6 +55,9 @@ class BST(BinaryTree):
             for i in self._traverse(node.right):
                 yield i
 
+    def to_list(self, traversal_type):
+        super().to_list(self, traversal_type)
+
     def is_bst_satisfied(self):
         '''
         Whenever you implement a data structure,
