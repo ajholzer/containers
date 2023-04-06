@@ -149,7 +149,7 @@ class Heap(BinaryTree):
         Implement this function.
         '''
         if len(self.to_list('postorder')) == 0:
-                return 'empty'
+            return 'empty'
         return min(self.to_list('postorder'))
 
     def remove_min(self):
