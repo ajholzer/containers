@@ -73,7 +73,6 @@ class BST(BinaryTree):
         if l1 != l2:
             return False
         return True
-    
 
     def is_bst_satisfied(self):
         '''
