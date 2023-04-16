@@ -73,6 +73,9 @@ class BST(BinaryTree):
         if l1 != l2:
             return False
         return True
+    
+    def to_list(self, traversal_type):
+        super().to_list(self, traversal_type)
 
     def is_bst_satisfied(self):
         '''

@@ -1,7 +1,11 @@
 '''
 This file implements the AVL Tree data structure.
+<<<<<<< HEAD
 The functions in this file are considerably harder than the functions in the
 BinaryTree and BST files,
+=======
+The functions in this file are considerably harder than the functions in the BinaryTree and BST files,
+>>>>>>> heap
 but there are fewer of them.
 '''
 
@@ -67,7 +71,6 @@ class AVLTree(BST):
         '''
         FIXME:
         Implement this function.
-        The lecture videos provide a high-level overview of tree rotations,
         and the textbook provides full python code.
         The textbook's class hierarchy for their AVL tree code is fairly
         different from our class hierarchy,
@@ -162,7 +165,7 @@ class AVLTree(BST):
         But both the insert function needs the rebalancing code,
         so I recommend including that code here.
         '''
-        if AVLTree._balance_facto(node) < 0:
+        if AVLTree._balance_factor(node) < 0:
             if AVLTree._balance_factor(node.right) > 0:
                 node.right = AVLTree._right_rotate(node.right)
                 return AVLTree._left_rotate(node)
