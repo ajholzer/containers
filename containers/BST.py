@@ -74,8 +74,6 @@ class BST(BinaryTree):
             return False
         return True
     
-    def to_list(self, traversal_type):
-        super().to_list(self, traversal_type)
 
     def is_bst_satisfied(self):
         '''
@@ -132,7 +130,7 @@ class BST(BinaryTree):
         if self.root is None:
             self.root = Node(value)
         else:
-            self._insert(self, value, self.root)
+            BST._insert(self, value, self.root)
 
     @staticmethod
     def _insert(self, value, node):

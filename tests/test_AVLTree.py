@@ -249,14 +249,9 @@ def test__AVLTree___init__(xs):
 # NOTE:
 # I am not having you implement the remove function,
 # and therefore the following test cases are commented out.
-
+'''
 @given(xs=ints)
 def test__AVLTree_remove1(xs):
-    '''
-    This tests the remove function.
-    In order to test the remove function, we must be able to generate valid AVLTrees.
-    Therefore, you must have all the insert functionality completed before this test can pass.
-    '''
     random.seed(0)
     xs = list(set(xs))
     avl = AVLTree(xs)
@@ -268,6 +263,7 @@ def test__AVLTree_remove1(xs):
         assert x not in avl
         assert set(avl.to_list('inorder'))==set(xs)
         assert avl.is_avl_satisfied()
+'''
 
 @given(xs=ints)
 def test__AVLTree_remove2(xs):
