@@ -287,7 +287,6 @@ def test__BST_iterable_1():
     '''
     The BST should be iterable.
     Iterating over the tree should give the results in sorted order.
-
     HINT:
     Currently, the BST class is not iterable because it does not define the __iter__ method.
     Therefore, these tests all fail.
@@ -318,6 +317,23 @@ def test__BST_iterable_2(xs):
 
     xs2 = copy.copy(xs)
     random.shuffle(xs2)
-    bst2 = BST(xs2)
-    
+    bst2 = BST(xs2)    
     assert list(bst1) == list(bst2)
+
+@given(xs=ints)
+def test__BST_eq(xs):
+    '''
+    This test is essentially the same as the previous one,
+    but tests the == operator specifically.
+    '''
+    xs = list(set(xs))
+
+    xs1 = copy.copy(xs)
+    random.shuffle(xs1)
+    bst1 = BST(xs1)
+
+    xs2 = copy.copy(xs)
+    random.shuffle(xs2)
+    bst2 = BST(xs2)
+
+    assert bst1 == bst2
